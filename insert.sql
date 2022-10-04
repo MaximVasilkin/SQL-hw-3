@@ -56,23 +56,23 @@ values
 
 insert into Track(name, album_id, lenght_seconds)
 values
-('My track', (SELECT id FROM Album WHERE name='My album'), 600),
-('What a Wonderful World', (SELECT id FROM Album WHERE name='What A Wonderful World'), 141),
-('Cabaret', (SELECT id FROM Album WHERE name='What A Wonderful World'), 166),
-('Lessons', (SELECT id FROM Album WHERE name='To Believe'), 549),
-('The Workers of Art', (SELECT id FROM Album WHERE name='To Believe'), 379),
-('Всё для тебя', (SELECT id FROM Album WHERE name='Берега мечты'), 240),
-('Дайте мне...', (SELECT id FROM Album WHERE name='Берега мечты'), 262),
-('Чай с баранками', (SELECT id FROM Album WHERE name='Роза'), 312),
-('Ярославская', (SELECT id FROM Album WHERE name='Роза'), 147),
-('D.A.N.C.E.', (SELECT id FROM Album WHERE name='A Cross The Universe'), 242),
-('Genesis', (SELECT id FROM Album WHERE name='A Cross The Universe'), 234),
-('Monarchy of Roses', (SELECT id FROM Album WHERE name='I am with You'), 254),
-('The Adventures of Rain Dance Maggie', (SELECT id FROM Album WHERE name='I am with You'), 282),
-('Pump It', (SELECT id FROM Album WHERE name='Pump It'), 226),
-('Pump It Travis Barker Remix Version', (SELECT id FROM Album WHERE name='Pump It'), 215),
-('Liberian Girl', (SELECT id FROM Album WHERE name='Bad'), 232),
-('Man in the Mirror', (SELECT id FROM Album WHERE name='Bad'), 303);
+('My track', (SELECT album_id FROM SingerAlbum join singer on singer_id = id where name = 'Me'), 600),
+('What a Wonderful World', (SELECT album_id FROM SingerAlbum join singer on singer_id = id where name = 'Louis Armstrong'), 141),
+('Cabaret', (SELECT album_id FROM SingerAlbum join singer on singer_id = id where name = 'Louis Armstrong'), 166),
+('Lessons', (SELECT album_id FROM SingerAlbum join singer on singer_id = id where name = 'The Cinematic Orchestra'), 549),
+('The Workers of Art', (SELECT album_id FROM SingerAlbum join singer on singer_id = id where name = 'The Cinematic Orchestra'), 379),
+('Всё для тебя', (SELECT album_id FROM SingerAlbum join singer on singer_id = id where name = 'Стас Михайлов'), 240),
+('Дайте мне...', (SELECT album_id FROM SingerAlbum join singer on singer_id = id where name = 'Стас Михайлов'), 262),
+('Чай с баранками', (SELECT album_id FROM SingerAlbum join singer on singer_id = id where name = 'Михаил Круг'), 312),
+('Ярославская', (SELECT album_id FROM SingerAlbum join singer on singer_id = id where name = 'Михаил Круг'), 147),
+('D.A.N.C.E.', (SELECT album_id FROM SingerAlbum join singer on singer_id = id where name = 'Justice'), 242),
+('Genesis', (SELECT album_id FROM SingerAlbum join singer on singer_id = id where name = 'Justice'), 234),
+('Monarchy of Roses', (SELECT album_id FROM SingerAlbum join singer on singer_id = id where name = 'Red Hot Chili Peppers'), 254),
+('The Adventures of Rain Dance Maggie', (SELECT album_id FROM SingerAlbum join singer on singer_id = id where name = 'Red Hot Chili Peppers'), 282),
+('Pump It', (SELECT album_id FROM SingerAlbum join singer on singer_id = id where name = 'Black Eyed Peas'), 226),
+('Pump It Travis Barker Remix Version', (SELECT album_id FROM SingerAlbum join singer on singer_id = id where name = 'Black Eyed Peas'), 215),
+('Liberian Girl', (SELECT album_id FROM SingerAlbum join singer on singer_id = id where name = 'Michael Jackson'), 232),
+('Man in the Mirror', (SELECT album_id FROM SingerAlbum join singer on singer_id = id where name = 'Michael Jackson'), 303);
 
 insert into Compilation(name, release_date)
 values
